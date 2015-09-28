@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "jpost.com improver",
+  "description": "This extension stops jpost.com pages from refreshing every 7 minutes and making it impossible to finish many articles without waiting for the refresh and then finding the place in the page where you were interrupted.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.jpost.com/*"],
+      "js": ["runat.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs", "http://www.jpost.com/*"
+  ]
+}
